@@ -3,7 +3,7 @@
 Welcome to my 3D Portfolio project! 🎉
 This repository hosts a fully interactive portfolio website built with React.js and Three.js, designed to showcase my education, projects, and technical skills in an immersive and modern way.
 
-![3D Portfolio Landing Page](SPLASHSCREEN.png)
+![3D Portfolio Landing Page](AhmedBackgroundScreen.png)
 
 ## Overview ℹ️
 
