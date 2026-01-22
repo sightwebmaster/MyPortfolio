@@ -1,16 +1,18 @@
-# 3D Portfolio README 🚀
+#3D Portfolio – Ahmed Ben Chaben 🚀
 
-Welcome to the 3D Portfolio project! 🎉 This repository hosts a fully functional portfolio website designed with React.js and Three.js. It offers an immersive experience to showcase your skills and projects in a visually appealing manner.
+Welcome to my 3D Portfolio project! 🎉
+This repository hosts a fully interactive portfolio website built with React.js and Three.js, designed to showcase my education, projects, and technical skills in an immersive and modern way.
 
 ![3D Portfolio Landing Page](SPLASHSCREEN.png)
 
 ## Overview ℹ️
 
-The 3D Portfolio is a modern and interactive web application built with React.js and Three.js, hosted on Vercel with Next.js. It offers a visually stunning platform to showcase your skills and projects, featuring smooth animations and responsive design.
+This 3D Portfolio is a modern and interactive web application developed using React.js, Three.js, and Vite.
+It provides a visually engaging platform to present my background as a Computer Science student and software engineering enthusiast, featuring smooth animations and a fully responsive design.
 
 ## Live Demo 💻
 
-Explore the live demonstration of the project at [www.sunnypatel.net](www.sunnypatel.net)!
+Explore the live demonstration of the project at [www.AhmedBenChaaben.net]
 
 ## Usage 🛠️
 
@@ -26,7 +28,7 @@ Feel free to explore the codebase and use it as a reference for building your ow
 
 ## Deployment 🌐
 
-This project is deployed on Vercel using Next.js. It dynamically hides environment variables, such as emailJS configuration, to ensure security. You can access the deployed project at [www.sunnypatel.net](www.sunnypatel.net).
+This project is deployed on Vercel using Next.js. It dynamically hides environment variables, such as emailJS configuration, to ensure security. You can access the deployed project at [www.AhmedBenChaaben.net].
 
 ## Built with Vite 🚀
 
