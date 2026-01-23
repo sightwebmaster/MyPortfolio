@@ -267,11 +267,10 @@ const experiences = [
     iconBg: "#fff",
     date: "Jan. 2025 - Sept. 2025",
     points: [
-      "Led the full development and deployment of the official event website using WordPress, ensuring responsive design and seamless UX.",
-      "Managed web hosting, domain configuration, and plugin integration to support online registration and participant engagement.",
-      "Oversaw all IT operations for the conference, including system setup, network configuration, and audiovisual coordination.",
-      "Ensured website performance, security, and real-time content updates throughout the event lifecycle.",
-      "Collaborated with design and content teams to maintain branding consistency and enhance digital visibility of the conference.",
+      "Led the digital and media presence of the group, managing web and social platforms to strengthen visibility and audience engagement.",
+      "Showcased activities and achievements through high-impact visual content, including videos, posts, and interactive media.",
+      "Ensured visual and branding consistency across all digital outputs and official and non-official documents.",
+      "Collaborated with cross-functional teams to align media strategies with organizational goals and event promotions.",
     ],
   },
   {
