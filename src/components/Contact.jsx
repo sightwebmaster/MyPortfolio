@@ -63,69 +63,52 @@ const Contact = () => {
     const { name, value } = e.target
     setForm({ ...form, [name]: value })
   }
+  // ...existing code...
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  if (!form.name || !form.email || !form.message) {
+    toast.error("Please fill all fields before submitting. ⚠️", {
+      duration: 3000,
+      position: "bottom-right",
+    });
+    return;
+  }
 
-    if (!form.name || !form.email || !form.message) {
-      toast.error("Please fill all fields before submitting. ⚠️", {
+  setLoading(true);
+
+  try {
+    const response = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    const data = await response.json();
+    if (data.success) {
+      setLoading(false);
+      setSuccess(true);
+      setForm({ name: "", email: "", message: "" });
+      toast.success("Message sent successfully!", {
         duration: 3000,
         position: "bottom-right",
-      })
-      return
+      });
+      setShowConfetti(true);
+      setTimeout(() => {
+        setSuccess(false);
+        setShowConfetti(false);
+      }, 5000);
+    } else {
+      throw new Error(data.error || "Unknown error");
     }
-
-    if (!captchaToken) {
-      toast("Hold up! Gotta make sure you're not a spam bot, checkmark the CAPTCHA! 🧠🤖", {
-        icon: "🛡️",
-        duration: 3500,
-        position: "bottom-right",
-      })
-      return
-    }
-
-    setLoading(true)
-
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Sunny Patel",
-          from_email: form.email,
-          to_email: "sunnypatel124555@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_EMAIL_JS_ACCESS_TOKEN,
-      )
-      .then(
-        () => {
-          setLoading(false)
-          setSuccess(true)
-          setForm({ name: "", email: "", message: "" })
-          toast.success("Message sent successfully!", {
-            duration: 3000,
-            position: "bottom-right",
-          })
-          setShowConfetti(true)
-          setCaptchaToken(null)
-          captchaRef.current.reset()
-          setTimeout(() => {
-            setSuccess(false)
-            setShowConfetti(false)
-          }, 5000)
-        },
-        (error) => {
-          setLoading(false)
-          console.error(error)
-          toast.error("Something went wrong. Please try again.", {
-            duration: 3000,
-            position: "bottom-right",
-          })
-        },
-      )
+  } catch (error) {
+    setLoading(false);
+    toast.error("Something went wrong. Please try again.", {
+      duration: 3000,
+      position: "bottom-right",
+    });
   }
+};
+// ...existing code...
 
   const handleConfettiComplete = useCallback(() => {
     setShowConfetti(false)
